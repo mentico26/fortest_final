@@ -7,7 +7,7 @@ const app = new PIXI.Application({
   transparent: true,
 });
 
-const MODEL_PATH = 'assets/model/pink-cat/pink-cat.model3.json';
+const MODEL_PATH = 'assets/model/Pink Cat/Pink Cat.model3.json';
 
 // モデルの読み込み
 PIXI.live2d.Live2DModel.from(MODEL_PATH).then(l2dModel => {
@@ -82,7 +82,7 @@ function loadExpressions(names) {
     btn.style.margin = '5px';
     btn.style.padding = '6px 12px';
     btn.onclick = () => {
-      fetch(`assets/model/pink-cat/exp/${name}.exp3.json`)
+      fetch(`assets/model/Pink Cat/exp/${name}.exp3.json`)
         .then(res => res.json())
         .then(expData => {
           const expMotion = model.internalModel.motionManager.expressionManager.createExpressionMotion(expData);
